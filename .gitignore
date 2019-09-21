@@ -129,3 +129,10 @@ dmypy.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Miscellaneous documents
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.pdf
