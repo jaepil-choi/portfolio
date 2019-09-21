@@ -136,3 +136,6 @@ dmypy.json
 *.ppt
 *.pptx
 *.pdf
+
+# Bootstrap template
+node_modules
