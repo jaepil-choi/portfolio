@@ -26,7 +26,7 @@ SECRET_KEY = 'm51rb)2+uh)i%avej)9b7w+uy)hwmfp1am+4=x0dc_*sc^i3-y'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'jaepilchoi5000.pythonanywhere.com',
+    '*'
 ]
 
 
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['portfolio/templates'],
+        'DIRS': [ os.path.join(BASE_DIR, 'portfolio/templates') ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
