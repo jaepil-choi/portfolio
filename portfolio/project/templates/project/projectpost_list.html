@@ -4,13 +4,18 @@
 {% block contents %}
 
 {% for project in object_list %}
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{ project.title }}</h5>
-    <p class="card-text">{{ project.content }}</p>
-    <a href="{% url 'detail' project.id %}" class="btn btn-primary">Open</a>
-  </div>
+<div class="card-group">
+    <div class="card" style="width: 18rem;">
+        {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+        <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.content }}</p>
+            <a href="{% url 'detail' project.id %}" class="btn btn-primary">Open</a>
+        </div>
+        {% comment %} <div class="card-footer">
+            <small class="text-muted">Created at {{ project.uploaded_at }}</small>
+        </div> {% endcomment %}
+    </div>
 </div>
 {% endfor %}
 
