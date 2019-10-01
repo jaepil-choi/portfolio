@@ -10,6 +10,7 @@ django = "*"
 faker = "*"
 django-imagekit = "*"
 pillow = "*"
+reportlab = "*"
 
 [requires]
 python_version = "3.7"
