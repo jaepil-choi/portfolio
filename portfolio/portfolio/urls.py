@@ -19,8 +19,11 @@ from django.urls import path, include
 import resume.urls
 import resume.views
 
+import project.urls
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', resume.views.ResumeView.as_view(), name='home'),
     path('resume/', include(resume.urls)),
+    path('project/', include(project.urls)),
 ]

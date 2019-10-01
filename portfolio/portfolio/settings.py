@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'imagekit',
 
     'resume.apps.ResumeConfig',
+    'project.apps.ProjectConfig',
 ]
 
 MIDDLEWARE = [
