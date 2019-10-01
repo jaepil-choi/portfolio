@@ -3,17 +3,18 @@
 
 {% block contents %}
 
-{% for project in object_list %}
+{% for object in object_list %}
 <div class="card-group">
     <div class="card" style="width: 18rem;">
         {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
         <div class="card-body">
-            <h5 class="card-title">{{ project.title }}</h5>
-            <p class="card-text">{{ project.content }}</p>
-            <a href="{% url 'detail' project.id %}" class="btn btn-primary">Open</a>
+            <h5 class="card-title">{{ object.title }}</h5>
+            <p class="card-text">{{ object.content }}</p>
+            {% comment %} <a href="{% url 'detail' object.id %}" class="btn btn-primary">Open</a> {% endcomment %}
+            <a href={{ object.url }} class="btn btn-primary">Open</a>
         </div>
         {% comment %} <div class="card-footer">
-            <small class="text-muted">Created at {{ project.uploaded_at }}</small>
+            <small class="text-muted">Created at {{ object.uploaded_at }}</small>
         </div> {% endcomment %}
     </div>
 </div>
