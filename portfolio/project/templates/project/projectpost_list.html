@@ -11,7 +11,7 @@
             <h5 class="card-title">{{ object.title }}</h5>
             <p class="card-text">{{ object.content }}</p>
             {% comment %} <a href="{% url 'detail' object.id %}" class="btn btn-primary">Open</a> {% endcomment %}
-            <a href={{ object.url }} class="btn btn-primary">Open</a>
+            <a href="{{ object.url }}" class="btn btn-primary">Open</a>
         </div>
         {% comment %} <div class="card-footer">
             <small class="text-muted">Created at {{ object.uploaded_at }}</small>
